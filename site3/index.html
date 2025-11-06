@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title data-i18n="site.title">BePay — Payment & Wallet</title>
+  <meta name="description" data-i18n="site.description">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="assets/favicon.png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#"> <!-- replace with your logo file -->
+        <img src="assets/logo.png" alt="logo" id="logo" />
+      </a>
+      <nav class="nav">
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="lang-switcher">
+        <button data-lang="en">EN</button>
+        <button data-lang="ru">RU</button>
+        <button data-lang="ka">KA</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <h1 data-i18n="hero.title">Fast — Secure — Global Payments</h1>
+        <p data-i18n="hero.subtitle">Accept, send and manage payments with BePay. Designed for modern businesses.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#contact" data-i18n="hero.cta">Get Started</a>
+          <a class="btn ghost" href="#features" data-i18n="hero.learn">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <h2 data-i18n="features.title">Features</h2>
+        <div class="cards">
+          <article class="card">
+            <h3 data-i18n="feature1.title">Instant Settlements</h3>
+            <p data-i18n="feature1.desc">Receive funds instantly and reconcile quickly across currencies.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="feature2.title">Secure Wallet</h3>
+            <p data-i18n="feature2.desc">Multi-layer security and compliance for your users' funds.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="feature3.title">Integration API</h3>
+            <p data-i18n="feature3.desc">Easy RESTful API and SDKs to integrate payments in minutes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <div class="container">
+        <h2 data-i18n="pricing.title">Pricing</h2>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <h3 data-i18n="pricing.basic">Basic</h3>
+            <p class="price" data-i18n="pricing.basicPrice">$0 / month</p>
+            <ul>
+              <li data-i18n="pricing.basicFeat1">No monthly fee</li>
+              <li data-i18n="pricing.basicFeat2">Transaction fees apply</li>
+            </ul>
+            <a class="btn" href="#contact" data-i18n="pricing.cta">Contact Sales</a>
+          </div>
+          <div class="price-card highlighted">
+            <h3 data-i18n="pricing.pro">Pro</h3>
+            <p class="price" data-i18n="pricing.proPrice">$49 / month</p>
+            <ul>
+              <li data-i18n="pricing.proFeat1">Lower transaction fees</li>
+              <li data-i18n="pricing.proFeat2">Priority support</li>
+            </ul>
+            <a class="btn" href="#contact" data-i18n="pricing.cta">Start Free Trial</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 data-i18n="contact.title">Contact Us</h2>
+        <p data-i18n="contact.subtitle">Questions? Send us a message and we'll get back to you.</p>
+        <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+          <label data-i18n="form.name">Name</label>
+          <input type="text" name="name" placeholder="" required>
+          <label data-i18n="form.email">Email</label>
+          <input type="email" name="email" placeholder="" required>
+          <label data-i18n="form.message">Message</label>
+          <textarea name="message" rows="4" required></textarea>
+          <button class="btn primary" type="submit" data-i18n="form.send">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> BePay — <span data-i18n="footer.rights">All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
