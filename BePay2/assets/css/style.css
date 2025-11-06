@@ -1,0 +1,20 @@
+:root{
+  --primary: #2B4EA1;
+  --accent: #007AFF;
+  --bg: #ffffff;
+  --muted: #6b7280;
+}
+body{font-family: Inter, Poppins, Arial, sans-serif; background:var(--bg); color:#111; margin:0;}
+.header{background:#fff; border-bottom:1px solid #eee;}
+.container{max-width:1100px; margin:0 auto; padding:20px;}
+.brand{display:flex; align-items:center; gap:12px;}
+.brand img{height:44px;}
+.nav{display:flex; gap:18px; align-items:center;}
+.cta{background:var(--accent); color:#fff; padding:10px 14px; border-radius:8px; text-decoration:none;}
+.hero{padding:60px 20px; display:flex; gap:30px; align-items:center; justify-content:space-between;}
+.hero .left{flex:1;}
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px;}
+.card{padding:18px; border-radius:10px; background:#f8fafc; box-shadow:0 6px 18px rgba(11,13,20,0.04);}
+.footer{background:#f3f6fb; padding:28px 20px; margin-top:40px;}
+.lang-switch{margin-left:auto;}
+@media(max-width:768px){.hero{flex-direction:column; text-align:center;} .nav{flex-wrap:wrap; gap:10px;} .lang-switch{margin:10px 0 0 0;}}
