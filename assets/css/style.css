@@ -1,0 +1,15 @@
+
+/* Minimal styles alongside Tailwind (Tailwind will be loaded from CDN in HTML) */
+:root { --primary: #2B4EA1; --accent:#007AFF; --muted:#6b7280; }
+body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:#fff; color:#0b1220; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+.header { background: transparent; }
+.container { max-width:1100px; margin:0 auto; padding:20px; }
+.footer { background:#f3f6fb; padding:28px 20px; margin-top:40px; }
+.cta { background:var(--accent); color:#fff; padding:10px 16px; border-radius:10px; display:inline-block; }
+/* Wave background */
+.wave-wrap { position:relative; overflow:hidden; }
+.wave { position:absolute; left:50%; top:0; transform:translateX(-50%); width:140%; height:100%; pointer-events:none; opacity:0.45; }
+@keyframes waveAnim { 0%{transform:translateX(-55%) translateY(0);}50%{transform:translateX(-45%) translateY(6px);}100%{transform:translateX(-55%) translateY(0);} }
+.wave svg { animation: waveAnim 8s ease-in-out infinite; }
+.card { background:#f8fafc; padding:18px; border-radius:12px; box-shadow:0 8px 30px rgba(11,13,20,0.04); }
+.lang-switch { margin-left:auto; }
