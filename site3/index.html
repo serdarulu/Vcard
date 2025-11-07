@@ -11,19 +11,19 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#"> <!-- using uploaded logo -->
-        <img src="assets/Bepaylogo.png" alt="BePay logo" id="logo" />
+      <a class="logo" href="#home">
+        <img src="assets/BePayLogo.PNG" alt="BePay logo" id="logo" />
       </a>
-      <nav class="nav">
+      <nav class="nav" id="mainNav">
         <a href="#home" data-i18n="nav.home">Home</a>
         <a href="#features" data-i18n="nav.features">Features</a>
         <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="lang-switcher">
-        <button data-lang="en">EN</button>
-        <button data-lang="ru">RU</button>
-        <button data-lang="ka">KA</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="ka">KA</button>
       </div>
     </div>
   </header>
@@ -31,13 +31,32 @@
   <main>
     <section id="home" class="hero">
       <div class="container hero-inner">
-        <h1 data-i18n="hero.title">Fast — Secure — Global Payments</h1>
-        <p data-i18n="hero.subtitle">Accept, send and manage payments with BePay. Designed for modern businesses.</p>
-        <div class="hero-cta">
-          <a class="btn primary" href="#contact" data-i18n="hero.cta">Get Started</a>
-          <a class="btn ghost" href="#features" data-i18n="hero.learn">Learn More</a>
+        <div class="hero-content">
+          <h1 data-i18n="hero.title">Fast — Secure — Global Payments</h1>
+          <p data-i18n="hero.subtitle">Accept, send and manage payments with BePay. Designed for modern businesses.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#contact" data-i18n="hero.cta">Get Started</a>
+            <a class="btn ghost" href="#features" data-i18n="hero.learn">Learn More</a>
+          </div>
+          <p class="muted">You can download the presentation files here: <a href="assets/BePayPresentation.pdf" target="_blank">PDF</a> • <a href="assets/ProcessingBePay.pptx" target="_blank">PowerPoint</a></p>
         </div>
-        <p style="margin-top:16px;color:var(--muted);font-size:14px;">You can download the presentation files here: <a href="assets/BePayPresentation.pdf" target="_blank">PDF</a> • <a href="assets/ProcessingBePay.pptx" target="_blank">PowerPoint</a></p>
+        <div class="hero-art" aria-hidden="true">
+          <!-- decorative SVG background to replace hero image (keeps repo lightweight) -->
+          <svg width="520" height="360" viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0" stop-color="#00bcd4" stop-opacity="0.9"/>
+                <stop offset="1" stop-color="#6c5ce7" stop-opacity="0.9"/>
+              </linearGradient>
+            </defs>
+            <rect width="520" height="360" rx="20" fill="url(#g1)"/>
+            <g transform="translate(20,20) scale(0.9)" fill="#fff" opacity="0.12">
+              <circle cx="50" cy="70" r="60"/>
+              <rect x="160" y="40" width="160" height="100" rx="12" />
+              <circle cx="420" cy="120" r="70"/>
+            </g>
+          </svg>
+        </div>
       </div>
     </section>
 
@@ -91,7 +110,6 @@
       <div class="container">
         <h2 data-i18n="contact.title">Contact Us</h2>
         <p data-i18n="contact.subtitle">Questions? Send us a message and we'll get back to you.</p>
-        <!-- Using a client-side mailto fallback so messages go to info@bepay.ge on users' email clients -->
         <form id="contactForm" onsubmit="sendMail(event)">
           <label data-i18n="form.name">Name</label>
           <input type="text" id="cf-name" name="name" placeholder="" required>
@@ -101,9 +119,10 @@
           <textarea id="cf-message" name="message" rows="4" required></textarea>
           <button class="btn primary" type="submit" data-i18n="form.send">Send Message</button>
         </form>
-        <p style="margin-top:10px;color:#94a3b8;font-size:13px;">If the mail client does not open, you can email us directly at <a href="mailto:info@bepay.ge">info@bepay.ge</a>.</p>
+        <p class="muted">If the mail client does not open, email <a href="mailto:info@bepay.ge">info@bepay.ge</a>.</p>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
@@ -113,19 +132,5 @@
   </footer>
 
   <script src="assets/script.js"></script>
-  <script>
-    // build a mailto link from the form values and open user's mail client
-    function sendMail(e){
-      e.preventDefault();
-      const name = encodeURIComponent(document.getElementById('cf-name').value || '');
-      const email = encodeURIComponent(document.getElementById('cf-email').value || '');
-      const message = encodeURIComponent(document.getElementById('cf-message').value || '');
-      const subject = encodeURIComponent('BePay Contact');
-      const body = encodeURIComponent('Name: ') + name + '%0A' + encodeURIComponent('Email: ') + email + '%0A%0A' + message;
-      const mailto = `mailto:info@bepay.ge?subject=${subject}&body=${body}`;
-      window.location.href = mailto;
-    }
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
