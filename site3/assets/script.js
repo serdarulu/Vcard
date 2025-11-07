@@ -1,5 +1,5 @@
 // Simple i18n loader and UI interactions
-const I18N_PATH = '/site3/i18n/';
+const I18N_PATH = 'i18n/';
 let locale = 'en';
 let translations = {};
 
