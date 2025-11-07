@@ -1,137 +1,27 @@
-/!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BePay — Payments for Merchants</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <meta name="description" content="BePay — Fast, secure and developer-friendly payment processing." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site 5</title>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="#home"><img src="assets/BePayLogo.PNG" alt="BePay Logo"/></a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#home" data-scroll>Home</a>
-        <a href="#about" data-scroll>About</a>
-        <a href="#services" data-scroll>Services</a>
-        <a href="#contact" data-scroll>Contact</a>
-      </nav>
-      <div class="lang-switcher" role="tablist" aria-label="Language selector">
-        <button class="lang-btn" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="ru">RU</button>
-        <button class="lang-btn" data-lang="ka">KA</button>
-      </div>
-      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-    </div>
-  </header>
-
-  <main id="home">
-    <section class="hero container" id="hero">
-      <div class="hero-content">
-        <h1 data-i18n="hero.title">Payments, reimagined for merchants</h1>
-        <p data-i18n="hero.subtitle">Fast, secure and developer-friendly payment processing.</p>
-        <div class="hero-ctas">
-          <a class="btn primary" href="mailto:info@bepay.ge?subject=Demo request" data-i18n="hero.cta">Get a demo</a>
-          <a class="btn ghost" href="#services" data-scroll data-i18n="hero.cta2">How it works</a>
-        </div>
-        <div class="hero-features">
-          <div class="feature" data-i18n="features.fast">Low latency transactions</div>
-          <div class="feature" data-i18n="features.secure">PCI-compliant security</div>
-          <div class="feature" data-i18n="features.api">Developer-friendly APIs</div>
-        </div>
-      </div>
-      <div class="hero-media">
-        <!-- Illustration from assets -->
-        <img src="assets/hero-illustration.svg" alt="Payments illustration" class="hero-illustration" />
-      </div>
+    <form netlify="true" name="contact" method="POST">
+        <input type="hidden" name="form-name" value="contact" />
+        <!-- Add your form fields here -->
+    </form>
+    <section id="features">
+        <h2>Features</h2>
+        <!-- Add features content here -->
     </section>
-
-    <section id="about" class="about container">
-      <h2 data-i18n="about.title">About BePay</h2>
-      <p data-i18n="about.desc">We help merchants accept payments across channels with fast settlement, robust security and developer tools.</p>
-      <div class="mission-grid">
-        <div class="card"><h3 data-i18n="mission.title1">Mission</h3><p data-i18n="mission.desc1">Make payments effortless and reliable for businesses.</p></div>
-        <div class="card"><h3 data-i18n="mission.title2">Vision</h3><p data-i18n="mission.desc2">Enable commerce across the Caucasus and beyond.</p></div>
-        <div class="card"><h3 data-i18n="mission.title3">Approach</h3><p data-i18n="mission.desc3">API-first, security-first, partner-first.</p></div>
-      </div>
+    <section id="case-studies">
+        <h2>Case Studies</h2>
+        <!-- Add case studies content here -->
     </section>
-
-    <section id="services" class="services container">
-      <h2 data-i18n="services.title">Services</h2>
-      <div class="cards">
-        <div class="card">
-          <h3 data-i18n="services.processing">Payment Processing</h3>
-          <p data-i18n="services.processing_desc">Card acquiring, settlement and reconciliation.</p>
-        </div>
-        <div class="card">
-          <h3 data-i18n="services.terminal">Terminal & POS</h3>
-          <p data-i18n="services.terminal_desc">Hardware integration for in-person payments.</p>
-        </div>
-        <div class="card">
-          <h3 data-i18n="services.issuing">Card Issuing</h3>
-          <p data-i18n="services.issuing_desc">Virtual and physical card issuing for businesses.</p>
-        </div>
-      </div>
+    <section id="faq">
+        <h2>FAQ</h2>
+        <!-- Add FAQ content here -->
     </section>
-
-    <section id="downloads" class="downloads container">
-      <h2 data-i18n="downloads.title">Downloads</h2>
-      <ul>
-        <li><a href="assets/ProcessingBePay.pptx" download>ProcessingBePay.pptx</a></li>
-        <li><a href="assets/BePayPresentation.pdf" download>BePayPresentation.pdf</a></li>
-      </ul>
-    </section>
-
-    <section id="contact" class="contact container">
-      <h2 data-i18n="contact.title">Contact</h2>
-      <p data-i18n="contact.desc">Reach out for partnerships, integrations and demos.</p>
-      <form id="contactForm" class="contact-form" onsubmit="return false;">
-        <input type="text" name="name" placeholder="Name" data-i18n-placeholder="contact.form.name" required />
-        <input type="email" name="email" placeholder="Email" data-i18n-placeholder="contact.form.email" required />
-        <textarea name="message" rows="5" placeholder="Message" data-i18n-placeholder="contact.form.message"></textarea>
-        <button class="btn primary" id="submitBtn" data-i18n="contact.form.send">Send</button>
-      </form>
-    </section>
-  </main>
-
-  <!-- Chat widget (WhatsApp-backed) -->
-  <div id="chatWidget" class="chat-widget" aria-hidden="true">
-    <button id="chatToggle" class="chat-toggle" aria-label="Open chat">
-      <img src="assets/chat-avatar.svg" alt="chat" />
-      <span class="badge">Online</span>
-    </button>
-
-    <div id="chatPanel" class="chat-panel" role="dialog" aria-label="Live support chat">
-      <header class="chat-header">
-        <div class="chat-title">BePay Support</div>
-        <button id="chatClose" class="chat-close" aria-label="Close chat">✕</button>
-      </header>
-      <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
-      <div class="chat-actions">
-        <input id="chatInput" placeholder="Type your message..." aria-label="Type message" />
-        <button id="chatSend" class="btn primary">Send</button>
-      </div>
-      <div class="chat-footer">
-        <button id="chatWhatsapp" class="btn ghost">Open in WhatsApp</button>
-      </div>
-    </div>
-  </div>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <img src="assets/BePayLogo.PNG" alt="BePay" class="footer-logo" />
-        <small data-i18n="footer.copy">&copy; BePay</small>
-      </div>
-      <div class="footer-right">
-        <nav>
-          <a href="#">Twitter</a> • <a href="#">LinkedIn</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+    <!-- Improved hero visuals here -->
 </body>
 </html>
