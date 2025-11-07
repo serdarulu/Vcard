@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" rx="12" fill="#061827" />
+  <g transform="translate(28,28)">
+    <rect width="320" height="80" rx="8" fill="#0f3f47" />
+    <text x="16" y="52" fill="#e6eef8" font-size="20">Fraud & Risk</text>
+    <rect y="120" width="720" height="220" rx="10" fill="#071a2b" />
+    <text x="16" y="160" fill="#94a3b8" font-size="16">Adaptive fraud rules, chargeback handling and dispute workflow.</text>
+  </g>
+</svg>
