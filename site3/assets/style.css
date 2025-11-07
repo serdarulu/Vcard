@@ -38,4 +38,5 @@ body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;backg
 .contact{padding:48px 0}
 form{display:grid;gap:10px;max-width:540px}
 input,textarea{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text)}
-.site-footer{padding:22px 0;background:transparent;color:var(--muted)}n@media(max-width:900px){.hero-inner{flex-direction:column-reverse}.hero-art{width:100%}.nav{display:none} }
+.site-footer{padding:22px 0;background:transparent;color:var(--muted)}
+@media(max-width:900px){.hero-inner{flex-direction:column-reverse}.hero-art{width:100%}.nav{display:none}}
