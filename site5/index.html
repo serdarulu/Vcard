@@ -1,4 +1,4 @@
-<!doctype html>
+/!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -42,10 +42,8 @@
         </div>
       </div>
       <div class="hero-media">
-        <!-- Video or illustration from slides -->
-        <video muted loop playsinline autoplay poster="assets/flow-preview.webp" class="hero-video">
-          <source src="assets/hero.mp4" type="video/mp4">
-        </video>
+        <!-- Illustration from assets -->
+        <img src="assets/hero-illustration.svg" alt="Payments illustration" class="hero-illustration" />
       </div>
     </section>
 
@@ -96,6 +94,29 @@
       </form>
     </section>
   </main>
+
+  <!-- Chat widget (WhatsApp-backed) -->
+  <div id="chatWidget" class="chat-widget" aria-hidden="true">
+    <button id="chatToggle" class="chat-toggle" aria-label="Open chat">
+      <img src="assets/chat-avatar.svg" alt="chat" />
+      <span class="badge">Online</span>
+    </button>
+
+    <div id="chatPanel" class="chat-panel" role="dialog" aria-label="Live support chat">
+      <header class="chat-header">
+        <div class="chat-title">BePay Support</div>
+        <button id="chatClose" class="chat-close" aria-label="Close chat">✕</button>
+      </header>
+      <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+      <div class="chat-actions">
+        <input id="chatInput" placeholder="Type your message..." aria-label="Type message" />
+        <button id="chatSend" class="btn primary">Send</button>
+      </div>
+      <div class="chat-footer">
+        <button id="chatWhatsapp" class="btn ghost">Open in WhatsApp</button>
+      </div>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="container footer-inner">

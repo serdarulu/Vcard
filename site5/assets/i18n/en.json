@@ -29,5 +29,9 @@
   "contact.form.message":"How can we help?",
   "contact.form.send":"Send",
   "contact.form.sent":"Sent — thanks!",
-  "footer.copy":"© BePay"
+  "footer.copy":"© BePay",
+  "chat.greet":"Hello! Welcome to BePay support. Type your question or open WhatsApp to chat with an agent.",
+  "chat.reply":"Thanks — an agent will respond shortly via WhatsApp or here.",
+  "chat.whatsapp_message":"Hello, I need live support regarding payments.",
+  "chat.open":"Open in WhatsApp"
 }
