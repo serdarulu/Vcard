@@ -1,58 +1,22 @@
-{
-  "site": {
-    "title": "BePay — Payment & Wallet",
-    "description": "BePay — Fast, secure and global payment solutions for businesses."
-  },
-  "nav": {
-    "home": "Home",
-    "features": "Features",
-    "pricing": "Pricing",
-    "contact": "Contact"
-  },
-  "hero": {
-    "title": "Fast — Secure — Global Payments",
-    "subtitle": "Accept, send and manage payments with BePay. Designed for modern businesses.",
-    "cta": "Get Started",
-    "learn": "Learn More"
-  },
-  "features": {
-    "title": "Features"
-  },
-  "feature1": {
-    "title": "Instant Settlements",
-    "desc": "Receive funds instantly and reconcile quickly across currencies."
-  },
-  "feature2": {
-    "title": "Secure Wallet",
-    "desc": "Multi-layer security and compliance for your users' funds."
-  },
-  "feature3": {
-    "title": "Integration API",
-    "desc": "Easy RESTful API and SDKs to integrate payments in minutes."
-  },
-  "pricing": {
-    "title": "Pricing",
-    "basic": "Basic",
-    "basicPrice": "Free",
-    "basicFeat1": "No monthly fee",
-    "basicFeat2": "Transaction fees apply",
-    "pro": "Pro",
-    "proPrice": "$49 / month",
-    "proFeat1": "Lower transaction fees",
-    "proFeat2": "Priority support",
-    "cta": "Contact Sales"
-  },
-  "contact": {
-    "title": "Contact Us",
-    "subtitle": "Questions? Send us a message and we'll get back to you."
-  },
-  "form": {
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "send": "Send Message"
-  },
-  "footer": {
-    "rights": "All rights reserved."
-  }
+{  
+  "site":{  
+    "title":"BePay — Payment & Wallet",  
+    "description":"Accept, send and manage payments with BePay"  
+  },  
+  "nav":{  
+    "home":"Home","features":"Features","pricing":"Pricing","contact":"Contact"  
+  },  
+  "hero":{  
+    "title":"Fast — Secure — Global Payments",  
+    "subtitle":"Accept, send and manage payments with BePay. Designed for modern businesses.",  
+    "cta":"Get Started","learn":"Learn More"  
+  },  
+  "features":{"title":"Features"},  
+  "feature1":{"title":"Instant Settlements","desc":"Receive funds instantly and reconcile quickly across currencies."},  
+  "feature2":{"title":"Secure Wallet","desc":"Multi-layer security and compliance for your users' funds."},  
+  "feature3":{"title":"Integration API","desc":"Easy RESTful API and SDKs to integrate payments in minutes."},  
+  "pricing":{"title":"Pricing","basic":"Basic","basicPrice":"$0 / month","basicFeat1":"No monthly fee","basicFeat2":"Transaction fees apply","pro":"Pro","proPrice":"$49 / month","proFeat1":"Lower transaction fees","proFeat2":"Priority support","cta":"Contact Sales"},  
+  "contact":{"title":"Contact Us","subtitle":"Questions? Send us a message and we'll get back to you."},  
+  "form":{"name":"Name","email":"Email","message":"Message","send":"Send Message"},  
+  "footer":{"rights":"All rights reserved."}  
 }

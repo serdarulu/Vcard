@@ -1,42 +1,53 @@
-(async function(){
-  const defaultLang = 'en';
-  const langButtons = document.querySelectorAll('.lang-switcher [data-lang]');
-  const yearEl = document.getElementById('year');
-  yearEl.textContent = new Date().getFullYear();
+// Simple i18n loader and UI interactions
+const I18N_PATH = '/site3/i18n/';
+let locale = 'en';
+let translations = {};
 
-  function setLangOnButtons(active){
-    langButtons.forEach(b => {
-      b.style.opacity = b.dataset.lang === active ? '1' : '0.6';
-    });
-  }
+async function loadLocale(l){
+  try{
+    const res = await fetch(I18N_PATH + l + '.json');
+    if(!res.ok) throw new Error('no locale');
+    translations = await res.json();
+    locale = l;
+    applyTranslations();
+    document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active', b.dataset.lang===l));
+  }catch(e){console.warn('i18n load failed',e)}
+}
 
-  async function loadLang(lang){
-    try{
-      const res = await fetch(`i18n/${lang}.json`);
-      if(!res.ok) throw new Error('Lang file not found');
-      const data = await res.json();
-      document.querySelectorAll('[data-i18n]').forEach(el=>{
-        const key = el.getAttribute('data-i18n');
-        const val = key.split('.').reduce((o,k)=> (o && o[k] !== undefined) ? o[k] : null, data);
-        if(val !== null){
-          if(el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea'){
-            el.placeholder = val;
-          } else {
-            el.textContent = val;
-          }
-        }
-      });
-      setLangOnButtons(lang);
-      localStorage.setItem('site_lang', lang);
-    } catch(e){
-      console.error('Could not load language', e);
-    }
-  }
-
-  langButtons.forEach(b=>{
-    b.addEventListener('click', ()=> loadLang(b.dataset.lang));
+function applyTranslations(){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    const txt = getKey(translations, key) || el.textContent;
+    if(el.tagName.toLowerCase()==='input' || el.tagName.toLowerCase()==='textarea') el.placeholder = txt;
+    else el.textContent = txt;
   });
+}
 
-  const stored = localStorage.getItem('site_lang') || defaultLang;
-  await loadLang(stored);
-})();
+function getKey(obj, path){
+  const parts = path.split('.');
+  let cur = obj;
+  for(const p of parts){ if(!cur) return null; cur = cur[p]; }
+  return cur;
+}
+
+document.addEventListener('click', e=>{
+  const b = e.target.closest('.lang-btn');
+  if(b) loadLocale(b.dataset.lang);
+});
+
+// contact form mailto fallback
+function sendMail(e){
+  e.preventDefault();
+  const name = encodeURIComponent(document.getElementById('cf-name').value || '');
+  const email = encodeURIComponent(document.getElementById('cf-email').value || '');
+  const message = encodeURIComponent(document.getElementById('cf-message').value || '');
+  const subject = encodeURIComponent('BePay Contact');
+  const body = 'Name: '+name+'%0AEmail: '+email+'%0A%0A'+message;
+  window.location.href = `mailto:info@bepay.ge?subject=${subject}&body=${body}`;
+}
+
+// small helpers
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// init
+loadLocale('en');
