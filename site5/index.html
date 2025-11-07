@@ -7,13 +7,13 @@
   <meta name="description" content="BePay — Fast, secure and developer-friendly payment processing." />
   <meta property="og:title" content="BePay — Payments for Merchants" />
   <meta property="og:description" content="Fast, secure and developer-friendly payment processing." />
-  <meta property="og:image" content="assets/og-image.svg" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta property="og:image" content="./assets/og-image.svg" />
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#home"><img src="assets/BePayLogo.PNG" alt="BePay Logo"/></a>
+      <a class="logo" href="#home"><img src="./assets/BePayLogo.PNG" alt="BePay Logo"/></a>
       <nav class="nav" aria-label="Main navigation">
         <a href="#home" data-scroll>Home</a>
         <a href="#about" data-scroll>About</a>
@@ -46,8 +46,7 @@
         </ul>
       </div>
       <div class="hero-media">
-        <!-- Poster for hero, video fallback can be added as hero-loop.webm/hero.mp4 -->
-        <img src="assets/hero-poster.svg" alt="payments illustration" class="hero-poster" />
+        <img src="./assets/hero-poster.svg" alt="payments illustration" class="hero-poster" />
       </div>
     </section>
 
@@ -83,12 +82,12 @@
       <h2 data-i18n="cases.title">Case Studies</h2>
       <div class="cards">
         <div class="card">
-          <img src="assets/slide1.svg" alt="case 1" />
+          <img src="./assets/slide1.svg" alt="case 1" />
           <h4 data-i18n="cases.case1.title">Retail chain integration</h4>
           <p data-i18n="cases.case1.desc">Seamless terminal rollout and instant reconciliation for a regional retailer.</p>
         </div>
         <div class="card">
-          <img src="assets/slide2.svg" alt="case 2" />
+          <img src="./assets/slide2.svg" alt="case 2" />
           <h4 data-i18n="cases.case2.title">E-commerce platform</h4>
           <p data-i18n="cases.case2.desc">API integration and chargeback management for a marketplace.</p>
         </div>
@@ -98,8 +97,8 @@
     <section id="downloads" class="downloads container">
       <h2 data-i18n="downloads.title">Downloads</h2>
       <ul>
-        <li><a href="assets/ProcessingBePay.pptx" download>ProcessingBePay.pptx</a></li>
-        <li><a href="assets/BePayPresentation.pdf" download>BePayPresentation.pdf</a></li>
+        <li><a href="./assets/ProcessingBePay.pptx" download>ProcessingBePay.pptx</a></li>
+        <li><a href="./assets/BePayPresentation.pdf" download>BePayPresentation.pdf</a></li>
       </ul>
     </section>
 
@@ -107,8 +106,7 @@
       <h2 data-i18n="contact.title">Contact</h2>
       <p data-i18n="contact.desc">Reach out for partnerships, integrations and demos.</p>
 
-      <!-- Netlify form -->
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/site5/thanks.html">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="./thanks.html">
         <input type="hidden" name="form-name" value="contact" />
         <p style="display:none">
           <label>Don’t fill this out: <input name="bot-field" /></label>
@@ -136,10 +134,9 @@
 
   </main>
 
-  <!-- Chat widget (WhatsApp-backed) -->
   <div id="chatWidget" class="chat-widget" aria-hidden="true">
     <button id="chatToggle" class="chat-toggle" aria-label="Open chat">
-      <img src="assets/chat-avatar.svg" alt="chat" />
+      <img src="./assets/chat-avatar.svg" alt="chat" />
       <span class="badge">Online</span>
     </button>
 
@@ -162,7 +159,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-left">
-        <img src="assets/BePayLogo.PNG" alt="BePay" class="footer-logo" />
+        <img src="./assets/BePayLogo.PNG" alt="BePay" class="footer-logo" />
         <small data-i18n="footer.copy">&copy; BePay</small>
       </div>
       <div class="footer-right">
@@ -173,6 +170,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
